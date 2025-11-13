@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TrabajoFinalCiclo
 {
-    public partial class Form1 : Form
+    public partial class frmMenuPrincipal : Form
     {
-        public Form1()
+        public frmMenuPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
