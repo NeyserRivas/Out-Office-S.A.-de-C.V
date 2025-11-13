@@ -1,0 +1,23 @@
+# Crea el archivo .gitignore con las configuraciones necesarias
+@"
+## Visual Studio temporales
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio cache
+*.cache
+"@ | Out-File -FilePath .gitignore -Encoding utf8
+
