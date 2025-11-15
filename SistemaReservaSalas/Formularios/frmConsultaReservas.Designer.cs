@@ -40,25 +40,31 @@ namespace SistemaReservaSalas
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotalDetalle = new System.Windows.Forms.Label();
             this.dgvDetalleAsistentes = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblEstadoDetalle = new System.Windows.Forms.Label();
+            this.lblFechaDetalle = new System.Windows.Forms.Label();
+            this.lblSalaDetalle = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBuscarResponsable = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.lblReservaId = new System.Windows.Forms.Label();
+            this.lblSubtotalDetalle = new System.Windows.Forms.Label();
+            this.lblIVADetalle = new System.Windows.Forms.Label();
+            this.btnVerDetalle = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelarReserva = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.lblHorarioDetalle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblResponsableNombre = new System.Windows.Forms.Label();
+            this.lblResponsableEmail = new System.Windows.Forms.Label();
+            this.lblResponsableTelefono = new System.Windows.Forms.Label();
+            this.lblProposito = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleAsistentes)).BeginInit();
@@ -167,15 +173,21 @@ namespace SistemaReservaSalas
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.lblProposito);
+            this.groupBox2.Controls.Add(this.lblResponsableTelefono);
+            this.groupBox2.Controls.Add(this.lblResponsableEmail);
+            this.groupBox2.Controls.Add(this.lblResponsableNombre);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.lblHorarioDetalle);
+            this.groupBox2.Controls.Add(this.lblIVADetalle);
+            this.groupBox2.Controls.Add(this.lblSubtotalDetalle);
+            this.groupBox2.Controls.Add(this.lblReservaId);
+            this.groupBox2.Controls.Add(this.lblTotalDetalle);
             this.groupBox2.Controls.Add(this.dgvDetalleAsistentes);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.lblEstadoDetalle);
+            this.groupBox2.Controls.Add(this.lblFechaDetalle);
+            this.groupBox2.Controls.Add(this.lblSalaDetalle);
             this.groupBox2.Location = new System.Drawing.Point(49, 375);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(576, 265);
@@ -183,14 +195,14 @@ namespace SistemaReservaSalas
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Panel de Detalle de la Reserva:";
             // 
-            // label9
+            // lblTotalDetalle
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(409, 234);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Total de la Reserva:";
+            this.lblTotalDetalle.AutoSize = true;
+            this.lblTotalDetalle.Location = new System.Drawing.Point(409, 234);
+            this.lblTotalDetalle.Name = "lblTotalDetalle";
+            this.lblTotalDetalle.Size = new System.Drawing.Size(37, 13);
+            this.lblTotalDetalle.TabIndex = 8;
+            this.lblTotalDetalle.Text = "Total: ";
             // 
             // dgvDetalleAsistentes
             // 
@@ -209,32 +221,32 @@ namespace SistemaReservaSalas
             this.label8.TabIndex = 7;
             this.label8.Text = "Lista de asistentes:";
             // 
-            // label5
+            // lblEstadoDetalle
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Responsable:";
+            this.lblEstadoDetalle.AutoSize = true;
+            this.lblEstadoDetalle.Location = new System.Drawing.Point(23, 100);
+            this.lblEstadoDetalle.Name = "lblEstadoDetalle";
+            this.lblEstadoDetalle.Size = new System.Drawing.Size(43, 13);
+            this.lblEstadoDetalle.TabIndex = 6;
+            this.lblEstadoDetalle.Text = "Estado:";
             // 
-            // label1
+            // lblFechaDetalle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Fecha y Hora:";
+            this.lblFechaDetalle.AutoSize = true;
+            this.lblFechaDetalle.Location = new System.Drawing.Point(23, 64);
+            this.lblFechaDetalle.Name = "lblFechaDetalle";
+            this.lblFechaDetalle.Size = new System.Drawing.Size(40, 13);
+            this.lblFechaDetalle.TabIndex = 5;
+            this.lblFechaDetalle.Text = "Fecha:";
             // 
-            // label4
+            // lblSalaDetalle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Sala:";
+            this.lblSalaDetalle.AutoSize = true;
+            this.lblSalaDetalle.Location = new System.Drawing.Point(23, 51);
+            this.lblSalaDetalle.Name = "lblSalaDetalle";
+            this.lblSalaDetalle.Size = new System.Drawing.Size(31, 13);
+            this.lblSalaDetalle.TabIndex = 4;
+            this.lblSalaDetalle.Text = "Sala:";
             // 
             // groupBox3
             // 
@@ -281,88 +293,142 @@ namespace SistemaReservaSalas
             this.txtBuscarResponsable.Size = new System.Drawing.Size(135, 20);
             this.txtBuscarResponsable.TabIndex = 15;
             // 
-            // label12
+            // lblReservaId
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(23, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Reserva ID:";
+            this.lblReservaId.AutoSize = true;
+            this.lblReservaId.Location = new System.Drawing.Point(23, 26);
+            this.lblReservaId.Name = "lblReservaId";
+            this.lblReservaId.Size = new System.Drawing.Size(64, 13);
+            this.lblReservaId.TabIndex = 9;
+            this.lblReservaId.Text = "Reserva ID:";
             // 
-            // label13
+            // lblSubtotalDetalle
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(409, 176);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 13);
-            this.label13.TabIndex = 10;
-            this.label13.Text = "Sub Total:";
+            this.lblSubtotalDetalle.AutoSize = true;
+            this.lblSubtotalDetalle.Location = new System.Drawing.Point(409, 176);
+            this.lblSubtotalDetalle.Name = "lblSubtotalDetalle";
+            this.lblSubtotalDetalle.Size = new System.Drawing.Size(56, 13);
+            this.lblSubtotalDetalle.TabIndex = 10;
+            this.lblSubtotalDetalle.Text = "Sub Total:";
             // 
-            // label14
+            // lblIVADetalle
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(409, 204);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 13);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "IVA (13%)";
+            this.lblIVADetalle.AutoSize = true;
+            this.lblIVADetalle.Location = new System.Drawing.Point(409, 204);
+            this.lblIVADetalle.Name = "lblIVADetalle";
+            this.lblIVADetalle.Size = new System.Drawing.Size(53, 13);
+            this.lblIVADetalle.TabIndex = 11;
+            this.lblIVADetalle.Text = "IVA (13%)";
             // 
-            // button1
+            // btnVerDetalle
             // 
-            this.button1.Location = new System.Drawing.Point(12, 665);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 33);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnVerDetalle.Location = new System.Drawing.Point(12, 665);
+            this.btnVerDetalle.Name = "btnVerDetalle";
+            this.btnVerDetalle.Size = new System.Drawing.Size(108, 33);
+            this.btnVerDetalle.TabIndex = 12;
+            this.btnVerDetalle.Text = "Ver Detalle";
+            this.btnVerDetalle.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.Location = new System.Drawing.Point(144, 665);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 33);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnModificar.Location = new System.Drawing.Point(144, 665);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(108, 33);
+            this.btnModificar.TabIndex = 13;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCancelarReserva
             // 
-            this.button3.Location = new System.Drawing.Point(283, 665);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 33);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Location = new System.Drawing.Point(283, 665);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(108, 33);
+            this.btnCancelarReserva.TabIndex = 14;
+            this.btnCancelarReserva.Text = "Cancelar Reserva";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnImprimir
             // 
-            this.button4.Location = new System.Drawing.Point(415, 665);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 33);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnImprimir.Location = new System.Drawing.Point(415, 665);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(108, 33);
+            this.btnImprimir.TabIndex = 15;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnCerrar
             // 
-            this.button5.Location = new System.Drawing.Point(550, 665);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 33);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCerrar.Location = new System.Drawing.Point(550, 665);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(108, 33);
+            this.btnCerrar.TabIndex = 16;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            // 
+            // lblHorarioDetalle
+            // 
+            this.lblHorarioDetalle.AutoSize = true;
+            this.lblHorarioDetalle.Location = new System.Drawing.Point(23, 77);
+            this.lblHorarioDetalle.Name = "lblHorarioDetalle";
+            this.lblHorarioDetalle.Size = new System.Drawing.Size(44, 13);
+            this.lblHorarioDetalle.TabIndex = 12;
+            this.lblHorarioDetalle.Text = "Horario:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(222, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Responsable:";
+            // 
+            // lblResponsableNombre
+            // 
+            this.lblResponsableNombre.AutoSize = true;
+            this.lblResponsableNombre.Location = new System.Drawing.Point(222, 51);
+            this.lblResponsableNombre.Name = "lblResponsableNombre";
+            this.lblResponsableNombre.Size = new System.Drawing.Size(50, 13);
+            this.lblResponsableNombre.TabIndex = 14;
+            this.lblResponsableNombre.Text = "Nombre: ";
+            // 
+            // lblResponsableEmail
+            // 
+            this.lblResponsableEmail.AutoSize = true;
+            this.lblResponsableEmail.Location = new System.Drawing.Point(222, 77);
+            this.lblResponsableEmail.Name = "lblResponsableEmail";
+            this.lblResponsableEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblResponsableEmail.TabIndex = 15;
+            this.lblResponsableEmail.Text = "Email";
+            // 
+            // lblResponsableTelefono
+            // 
+            this.lblResponsableTelefono.AutoSize = true;
+            this.lblResponsableTelefono.Location = new System.Drawing.Point(222, 100);
+            this.lblResponsableTelefono.Name = "lblResponsableTelefono";
+            this.lblResponsableTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblResponsableTelefono.TabIndex = 16;
+            this.lblResponsableTelefono.Text = "Teléfono";
+            // 
+            // lblProposito
+            // 
+            this.lblProposito.AutoSize = true;
+            this.lblProposito.Location = new System.Drawing.Point(222, 122);
+            this.lblProposito.Name = "lblProposito";
+            this.lblProposito.Size = new System.Drawing.Size(54, 13);
+            this.lblProposito.TabIndex = 17;
+            this.lblProposito.Text = "Proposito:";
             // 
             // frmConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 724);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnCancelarReserva);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnVerDetalle);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -387,30 +453,36 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSalaDetalle;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cmbSalaFiltro;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Button btnBuscarReservas;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTotalDetalle;
         private System.Windows.Forms.DataGridView dgvDetalleAsistentes;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEstadoDetalle;
+        private System.Windows.Forms.Label lblFechaDetalle;
         private System.Windows.Forms.DataGridView dgvReservas;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtBuscarResponsable;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblIVADetalle;
+        private System.Windows.Forms.Label lblSubtotalDetalle;
+        private System.Windows.Forms.Label lblReservaId;
+        private System.Windows.Forms.Button btnVerDetalle;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelarReserva;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHorarioDetalle;
+        private System.Windows.Forms.Label lblProposito;
+        private System.Windows.Forms.Label lblResponsableTelefono;
+        private System.Windows.Forms.Label lblResponsableEmail;
+        private System.Windows.Forms.Label lblResponsableNombre;
     }
 }
