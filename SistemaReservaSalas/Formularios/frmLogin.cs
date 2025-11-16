@@ -139,6 +139,7 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
+            //porque la caja de dialogo xd si con el MessageBox se va :v
             DialogResult resultado = MessageBox.Show(
                 "¿Está seguro que desea salir de la aplicación?",
                 "Confirmar Salida",

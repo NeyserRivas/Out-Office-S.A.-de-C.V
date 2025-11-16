@@ -19,7 +19,6 @@ namespace SistemaReservaSalas.Formularios
         private ReservaDAO reservaDAO;
         private SalaDAO salaDAO;
         private DataTable datosReporte;
-        private object chartReporte;
 
         /// <summary>
         /// Constructor del formulario
@@ -717,17 +716,12 @@ namespace SistemaReservaSalas.Formularios
         }
 
 
-        //TODO: No Tiene funcionalidad pero segun lo
-        //que he visto hay metodos que se supone seran usados en el o tal vez estoy equivocaco
+        //TODO: No Tiene funcionalidad pero segun lo que he visto hay mett
         private void btnGrafico_Click(object sender, EventArgs e)
         {
 
         }
 
-        private class ChartArea
-        {
-            public object AxisY { get; internal set; }
-            public object AxisX { get; internal set; }
-        }
+       
     }
 }

@@ -141,6 +141,7 @@ namespace SistemaReservaSalas.Formularios
             this.lblFechaSeleccionada.Size = new System.Drawing.Size(40, 14);
             this.lblFechaSeleccionada.TabIndex = 1;
             this.lblFechaSeleccionada.Text = "Fecha:";
+            this.lblFechaSeleccionada.Visible = false;
             // 
             // lblInfoDia
             // 

@@ -16,6 +16,7 @@ namespace SistemaReservaSalas.Formularios
         private SalaDAO salaDAO;
         private ReservaDAO reservaDAO;
         private int idSalaPreseleccionada;
+        private Usuario usuarioActual;
 
         /// <summary>
         /// Constructor del formulario
@@ -394,7 +395,12 @@ namespace SistemaReservaSalas.Formularios
         //TODO: No tene funcionalidad alguna
         private void btnNuevaReserva_Click(object sender, EventArgs e)
         {
+            AbrirFormulario(new frmNuevaReserva(usuarioActual));
+        }
 
+        private void AbrirFormulario(frmNuevaReserva frmNuevaReserva)
+        {
+            throw new NotImplementedException();
         }
     }
 }
