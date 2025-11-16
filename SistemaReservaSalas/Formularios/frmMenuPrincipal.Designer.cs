@@ -42,6 +42,7 @@
             this.btnVerSalas = new System.Windows.Forms.Button();
             this.btnGestionUsuarios = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.btnCerrarApp = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
             this.SuspendLayout();
@@ -167,11 +168,22 @@
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // btnCerrarApp
+            // 
+            this.btnCerrarApp.Location = new System.Drawing.Point(320, 396);
+            this.btnCerrarApp.Name = "btnCerrarApp";
+            this.btnCerrarApp.Size = new System.Drawing.Size(161, 29);
+            this.btnCerrarApp.TabIndex = 6;
+            this.btnCerrarApp.Text = "Cerrar Aplicación";
+            this.btnCerrarApp.UseVisualStyleBackColor = true;
+            this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCerrarApp);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnGestionUsuarios);
             this.Controls.Add(this.btnVerSalas);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button btnGestionUsuarios;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button btnCerrarApp;
     }
 }

@@ -267,6 +267,7 @@ namespace SistemaReservaSalas.Formularios
                     foreach (var asistente in reservaActual.Asistentes)
                     {
                         dgvDetalleAsistentes.Rows.Add(
+                            //TODO: Otra vez este nombre asistente que no se de donde depende
                             asistente.NombreAsistente,
                             $"Combo {asistente.ComboSeleccionado}",
                             $"${asistente.ObtenerPrecioCombo():F2}"
@@ -492,6 +493,7 @@ namespace SistemaReservaSalas.Formularios
             doc += "ASISTENTES Y SERVICIOS\n";
             doc += "───────────────────────────────────────────────────────────\n";
 
+            //TODO: este GroupBy da error tambien y no se de que depense
             var agrupadoPorCombo = reservaActual.Asistentes.GroupBy(a => a.ComboSeleccionado);
             foreach (var grupo in agrupadoPorCombo.OrderBy(g => g.Key))
             {

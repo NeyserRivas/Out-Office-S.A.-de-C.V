@@ -1,5 +1,5 @@
 ﻿
-namespace SistemaReservaSalas
+namespace SistemaReservaSalas.Formularios
 {
     partial class frmDisponibilidadSalas
     {
@@ -84,6 +84,7 @@ namespace SistemaReservaSalas
             this.cmbSalaCalendario.Name = "cmbSalaCalendario";
             this.cmbSalaCalendario.Size = new System.Drawing.Size(121, 22);
             this.cmbSalaCalendario.TabIndex = 1;
+            this.cmbSalaCalendario.SelectedIndexChanged += new System.EventHandler(this.cmbSalaCalendario_SelectedIndexChanged);
             // 
             // btnActualizar
             // 
@@ -100,6 +101,8 @@ namespace SistemaReservaSalas
             this.monthCalendar1.Location = new System.Drawing.Point(40, 178);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 2;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // groupBox2
             // 
@@ -156,6 +159,7 @@ namespace SistemaReservaSalas
             this.btnNuevaReserva.TabIndex = 4;
             this.btnNuevaReserva.Text = "Nueva Reserva";
             this.btnNuevaReserva.UseVisualStyleBackColor = true;
+            this.btnNuevaReserva.Click += new System.EventHandler(this.btnNuevaReserva_Click);
             // 
             // btnCerrar
             // 
@@ -234,6 +238,7 @@ namespace SistemaReservaSalas
             this.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmDisponibilidadSalas";
             this.Text = "Disponibilidad de Salas";
+            this.Load += new System.EventHandler(this.frmDisponibilidadSalas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).EndInit();

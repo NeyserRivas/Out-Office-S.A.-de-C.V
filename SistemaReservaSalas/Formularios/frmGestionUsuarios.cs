@@ -188,6 +188,7 @@ namespace SistemaReservaSalas.Formularios
 
             try
             {
+                //TODO: Aqui da error en Usuario despues de hacer new Usuario
                 Usuario usuario = new Usuario(
                     txtNombre.Text.Trim(),
                     txtEmail.Text.Trim(),
@@ -373,9 +374,7 @@ namespace SistemaReservaSalas.Formularios
             return true;
         }
 
-        #endregion
-
-        #region Estados del Formulario
+        
 
         /// <summary>
         /// Configura el estado inicial del formulario

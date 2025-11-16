@@ -203,14 +203,14 @@ namespace SistemaReservaSalas.Formularios
         /// <summary>
         /// Botón: Gestión de Usuarios (solo admin)
         /// </summary>
-        private void btnGestionUsuarios_Click(object sender, EventArgs e)
+        private void btnGestionUsuarios_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario(new frmGestionUsuarios(usuarioActual));
         }
 
-        #endregion
+        //#endregion
 
-        #region Métodos Auxiliares
+        //#region Métodos Auxiliares
 
         /// <summary>
         /// Abre un formulario como hijo MDI
@@ -309,9 +309,10 @@ namespace SistemaReservaSalas.Formularios
             panelBienvenida.Dock = DockStyle.Fill;
         }
 
-        private void btnGestionUsuarios_Click_1(object sender, EventArgs e)
+        //cerrar 
+        private void btnCerrarApp_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

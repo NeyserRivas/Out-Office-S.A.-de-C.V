@@ -1,5 +1,5 @@
 ﻿
-namespace SistemaReservaSalas
+namespace SistemaReservaSalas.Formularios
 {
     partial class frmReportes
     {
@@ -33,7 +33,7 @@ namespace SistemaReservaSalas
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbAsistentesYCombos = new System.Windows.Forms.RadioButton();
             this.rbOcupacionSalas = new System.Windows.Forms.RadioButton();
-            this.rbHistorialResponsable = new System.Windows.Forms.RadioButton();
+            this.rbHistorialReservas = new System.Windows.Forms.RadioButton();
             this.rbIngresosPorSala = new System.Windows.Forms.RadioButton();
             this.rbReservasPorFecha = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -64,6 +64,7 @@ namespace SistemaReservaSalas
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblInfoReportes = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,7 +87,7 @@ namespace SistemaReservaSalas
             // 
             this.groupBox1.Controls.Add(this.rbAsistentesYCombos);
             this.groupBox1.Controls.Add(this.rbOcupacionSalas);
-            this.groupBox1.Controls.Add(this.rbHistorialResponsable);
+            this.groupBox1.Controls.Add(this.rbHistorialReservas);
             this.groupBox1.Controls.Add(this.rbIngresosPorSala);
             this.groupBox1.Controls.Add(this.rbReservasPorFecha);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,17 +122,17 @@ namespace SistemaReservaSalas
             this.rbOcupacionSalas.Text = "Porcentaje de Ocupación de Salas";
             this.rbOcupacionSalas.UseVisualStyleBackColor = true;
             // 
-            // rbHistorialResponsable
+            // rbHistorialReservas
             // 
-            this.rbHistorialResponsable.AutoSize = true;
-            this.rbHistorialResponsable.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHistorialResponsable.Location = new System.Drawing.Point(21, 110);
-            this.rbHistorialResponsable.Name = "rbHistorialResponsable";
-            this.rbHistorialResponsable.Size = new System.Drawing.Size(222, 18);
-            this.rbHistorialResponsable.TabIndex = 2;
-            this.rbHistorialResponsable.TabStop = true;
-            this.rbHistorialResponsable.Text = "Historial de Reservas por Responsable";
-            this.rbHistorialResponsable.UseVisualStyleBackColor = true;
+            this.rbHistorialReservas.AutoSize = true;
+            this.rbHistorialReservas.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHistorialReservas.Location = new System.Drawing.Point(21, 110);
+            this.rbHistorialReservas.Name = "rbHistorialReservas";
+            this.rbHistorialReservas.Size = new System.Drawing.Size(133, 18);
+            this.rbHistorialReservas.TabIndex = 2;
+            this.rbHistorialReservas.TabStop = true;
+            this.rbHistorialReservas.Text = "Historial de Reservas";
+            this.rbHistorialReservas.UseVisualStyleBackColor = true;
             // 
             // rbIngresosPorSala
             // 
@@ -186,6 +187,7 @@ namespace SistemaReservaSalas
             this.btnGenerarReporte.TabIndex = 9;
             this.btnGenerarReporte.Text = "Generar Reporte";
             this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // txtBuscarResponsable
             // 
@@ -341,6 +343,7 @@ namespace SistemaReservaSalas
             this.btnExportarExcel.TabIndex = 4;
             this.btnExportarExcel.Text = "Exportar a Excel";
             this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click_1);
             // 
             // btnImprimir
             // 
@@ -361,6 +364,7 @@ namespace SistemaReservaSalas
             this.btnGrafico.TabIndex = 6;
             this.btnGrafico.Text = "Gráfico";
             this.btnGrafico.UseVisualStyleBackColor = true;
+            this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
             // 
             // btnCerrar
             // 
@@ -424,11 +428,21 @@ namespace SistemaReservaSalas
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // lblInfoReportes
+            // 
+            this.lblInfoReportes.AutoSize = true;
+            this.lblInfoReportes.Location = new System.Drawing.Point(282, 81);
+            this.lblInfoReportes.Name = "lblInfoReportes";
+            this.lblInfoReportes.Size = new System.Drawing.Size(56, 12);
+            this.lblInfoReportes.TabIndex = 19;
+            this.lblInfoReportes.Text = "Seleccione:";
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 642);
+            this.Controls.Add(this.lblInfoReportes);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGrafico);
@@ -441,6 +455,7 @@ namespace SistemaReservaSalas
             this.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmReportes";
             this.Text = "frmReportes";
+            this.Load += new System.EventHandler(this.frmReportes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -461,7 +476,7 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbAsistentesYCombos;
         private System.Windows.Forms.RadioButton rbOcupacionSalas;
-        private System.Windows.Forms.RadioButton rbHistorialResponsable;
+        private System.Windows.Forms.RadioButton rbHistorialReservas;
         private System.Windows.Forms.RadioButton rbIngresosPorSala;
         private System.Windows.Forms.RadioButton rbReservasPorFecha;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -492,5 +507,6 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.Label lblInfoReportes;
     }
 }

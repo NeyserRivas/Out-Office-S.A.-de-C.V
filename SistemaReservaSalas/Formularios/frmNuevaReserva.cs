@@ -261,7 +261,7 @@ namespace SistemaReservaSalas.Formularios
 
                 // Agregar a DataGridView
                 dgvAsistentes.Rows.Add(
-                    asistente.NombreAsistente,
+                    asistente.NombreAsistente,//TODO: NombreAsistente da un error 
                     $"Combo {asistente.ComboSeleccionado}",
                     $"${asistente.ObtenerPrecioCombo():F2}",
                     $"${subtotal:F2}"
@@ -454,7 +454,7 @@ namespace SistemaReservaSalas.Formularios
                     NombreResponsable = txtNombreResponsable.Text.Trim(),
                     EmailResponsable = txtEmailResponsable.Text.Trim(),
                     TelefonoResponsable = txtTelefonoResponsable.Text.Trim(),
-                    PropositoEvento = txtPropositoEvento.Text.Trim(),
+                    PropositoEvento = rtbPropositoEvento.Text.Trim(),
                     Asistentes = listaAsistentes,
                     Estado = "Activa"
                 };
@@ -496,159 +496,6 @@ namespace SistemaReservaSalas.Formularios
             }
         }
 
-        #region Validaciones
-
-        /// <summary>
-        /// Valida que se haya seleccionado una sala
-        /// </summary>
-        private bool ValidarSeleccionSala()
-        {
-            if (cmbSala.SelectedIndex == -1)
-            {
-                MessageBox.Show("Por favor seleccione una sala.",
-                    "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbSala.Focus();
-                return false;
-            }
-            return true;
-        }
-
-        /// <summary>
-        /// Valida los datos del asistente antes de agregarlo
-        /// </summary>
-        private bool ValidarDatosAsistente()
-        {
-            if (string.IsNullOrWhiteSpace(txtNombreAsistente.Text))
-            {
-                MessageBox.Show("Por favor ingrese el nombre del asistente.",
-                    "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNombreAsistente.Focus();
-                return false;
-            }
-
-            if (cmbComboAsistente.SelectedIndex == -1)
-            {
-                MessageBox.Show("Por favor seleccione un combo.",
-                    "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cmbComboAsistente.Focus();
-                return false;
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        /// Valida todos los datos de la reserva antes de guardar
-        /// </summary>
-        private bool ValidarReserva()
-        {
-            // Validar sala
-            if (!ValidarSeleccionSala())
-                return false;
-
-            // Validar fecha
-            if (dtpFecha.Value.Date < DateTime.Today)
-            {
-                MessageBox.Show("La fecha de reserva no puede ser anterior a hoy.",
-                    "Fecha Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // Validar duración
-            if (numDuracion.Value <= 0)
-            {
-                MessageBox.Show("La duración debe ser mayor a 0.",
-                    "Duración Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            // Validar responsable
-            if (string.IsNullOrWhiteSpace(txtNombreResponsable.Text))
-            {
-                MessageBox.Show("Por favor ingrese el nombre del responsable.",
-                    "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNombreResponsable.Focus();
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtEmailResponsable.Text) ||
-                !txtEmailResponsable.Text.Contains("@"))
-            {
-                MessageBox.Show("Por favor ingrese un email válido del responsable.",
-                    "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEmailResponsable.Focus();
-                return false;
-            }
-
-            // Validar asistentes
-            if (listaAsistentes.Count == 0)
-            {
-                MessageBox.Show("Debe agregar al menos un asistente.",
-                    "Sin Asistentes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNombreAsistente.Focus();
-                return false;
-            }
-
-            // Validar capacidad de la sala
-            if (listaAsistentes.Count > salaSeleccionada.Capacidad)
-            {
-                MessageBox.Show(
-                    $"La cantidad de asistentes ({listaAsistentes.Count}) excede la capacidad de la sala ({salaSeleccionada.Capacidad}).\n" +
-                    "Por favor quite algunos asistentes o seleccione otra sala.",
-                    "Capacidad Excedida",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return false;
-            }
-
-            return true;
-        }
-
-        #endregion
-
-        #region Métodos de Limpieza
-
-        /// <summary>
-        /// Limpia los campos del asistente
-        /// </summary>
-        private void LimpiarCamposAsistente()
-        {
-            txtNombreAsistente.Clear();
-            cmbComboAsistente.SelectedIndex = 0;
-            txtNombreAsistente.Focus();
-        }
-
-        /// <summary>
-        /// Limpia todo el formulario
-        /// </summary>
-        private void LimpiarFormulario()
-        {
-            cmbSala.SelectedIndex = -1;
-            salaSeleccionada = null;
-            lblCapacidadSala.Text = "Capacidad: -";
-
-            dtpFecha.Value = DateTime.Today;
-            dtpHoraInicio.Value = DateTime.Today.AddHours(8);
-            numDuracion.Value = 1;
-
-            txtNombreResponsable.Clear();
-            txtEmailResponsable.Clear();
-            txtTelefonoResponsable.Clear();
-            //txtPropositoEvento.Clear();
-            rtbPropositoEvento.Clear();
-
-            dgvAsistentes.Rows.Clear();
-            listaAsistentes.Clear();
-
-            LimpiarCamposAsistente();
-            ActualizarTotales();
-            ActualizarContadorAsistentes();
-
-            cmbSala.Focus();
-        }
-
-        #endregion
-
         /// <summary>
         /// Evento del botón Cancelar
         /// </summary>
@@ -664,6 +511,7 @@ namespace SistemaReservaSalas.Formularios
 
                 if (resultado == DialogResult.Yes)
                 {
+                    //TODO: Esto dice que no existe en el contexto actual
                     LimpiarFormulario();
                 }
             }
