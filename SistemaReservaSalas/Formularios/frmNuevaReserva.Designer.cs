@@ -29,7 +29,7 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardarReserva = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -68,6 +68,7 @@ namespace SistemaReservaSalas.Formularios
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblCombo1 = new System.Windows.Forms.Label();
             this.lblCombo3Detalle = new System.Windows.Forms.Label();
             this.lblCombo2Detalle = new System.Windows.Forms.Label();
             this.lblCombo1Detalle = new System.Windows.Forms.Label();
@@ -83,7 +84,6 @@ namespace SistemaReservaSalas.Formularios
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCombo1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).BeginInit();
@@ -380,6 +380,7 @@ namespace SistemaReservaSalas.Formularios
             this.lblTotalAsistentes.Size = new System.Drawing.Size(80, 12);
             this.lblTotalAsistentes.TabIndex = 21;
             this.lblTotalAsistentes.Text = "Total Asistentes";
+            this.lblTotalAsistentes.Click += new System.EventHandler(this.lblTotalAsistentes_Click);
             // 
             // dgvAsistentes
             // 
@@ -395,8 +396,8 @@ namespace SistemaReservaSalas.Formularios
             // 
             // Nombre
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             // 
@@ -475,6 +476,14 @@ namespace SistemaReservaSalas.Formularios
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Seleccion de sala:";
+            // 
+            // lblCombo1
+            // 
+            this.lblCombo1.AutoSize = true;
+            this.lblCombo1.Location = new System.Drawing.Point(23, 96);
+            this.lblCombo1.Name = "lblCombo1";
+            this.lblCombo1.Size = new System.Drawing.Size(0, 12);
+            this.lblCombo1.TabIndex = 23;
             // 
             // lblCombo3Detalle
             // 
@@ -599,14 +608,6 @@ namespace SistemaReservaSalas.Formularios
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // lblCombo1
-            // 
-            this.lblCombo1.AutoSize = true;
-            this.lblCombo1.Location = new System.Drawing.Point(23, 96);
-            this.lblCombo1.Name = "lblCombo1";
-            this.lblCombo1.Size = new System.Drawing.Size(0, 12);
-            this.lblCombo1.TabIndex = 23;
             // 
             // frmNuevaReserva
             // 

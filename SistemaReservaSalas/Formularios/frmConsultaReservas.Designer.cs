@@ -203,7 +203,7 @@ namespace SistemaReservaSalas.Formularios
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Panel de Detalle de la Reserva:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            //this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // lblResponsable
             // 
