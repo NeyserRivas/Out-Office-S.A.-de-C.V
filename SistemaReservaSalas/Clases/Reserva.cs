@@ -21,7 +21,9 @@ namespace SistemaReservaSalas.Clases
         public decimal Total { get; set; }
         public string Estado { get; set; }
 
+        //// Propiedades devueltas por JOIN con Sala
         public string NombreSala { get; set; }
+        public string UbicacionSala { get; set; }
 
         public List<Asistente> Asistentes { get; set; } = new List<Asistente>();
     }
