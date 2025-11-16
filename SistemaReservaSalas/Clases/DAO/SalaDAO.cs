@@ -8,18 +8,14 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaSalas.Clases.DAO
 {
-    class SalaDAO
+    public class SalaDAO : BaseDAO
     {
         #region Clase SalaDAO - Hereda de BaseDAO (HERENCIA 3)
         /// <summary>
         /// Clase DAO para operaciones con Salas
         /// Hereda de BaseDAO
+        /// Implementación del método abstracto Listar
         /// </summary>
-        public class SalaDAO : BaseDAO
-        {
-            /// <summary>
-            /// Implementación del método abstracto Listar
-            /// </summary>
             public override DataTable Listar()
             {
                 string query = @"SELECT IdSala, NombreSala, Ubicacion, Capacidad,
@@ -232,6 +228,7 @@ namespace SistemaReservaSalas.Clases.DAO
                     conexionBD.Desconectar();
                 }
             }
-        }
+        
     }
 }
+#endregion

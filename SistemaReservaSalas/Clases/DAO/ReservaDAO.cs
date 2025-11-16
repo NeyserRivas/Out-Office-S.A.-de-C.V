@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaSalas.Clases.DAO
 {
-    class ReservaDAO
+    class ReservaDAO : BaseDAO
     {
         /// <summary>
         /// Clase DAO para operaciones con Reservas
         /// Hereda de BaseDAO
         /// </summary>
-        public class ReservaDAO : BaseDAO
-        {
+       
             private AsistenteDAO asistenteDAO;
 
             public ReservaDAO()
@@ -413,6 +412,6 @@ namespace SistemaReservaSalas.Clases.DAO
                     throw new Exception("Error al obtener ocupación: " + ex.Message);
                 }
             }
-        }
+        
     }
 }

@@ -8,17 +8,13 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaSalas.Clases.DAO
 {
-    public class AsistenteDAO
+    public class AsistenteDAO : BaseDAO
     {
         /// <summary>
         /// Clase DAO para operaciones con Asistentes
         /// Hereda de BaseDAO
+        /// Implementación del método abstracto Listar
         /// </summary>
-        public class AsistenteDAO : BaseDAO
-        {
-            /// <summary>
-            /// Implementación del método abstracto Listar
-            /// </summary>
             public override DataTable Listar()
             {
                 string query = "SELECT * FROM AsistentesReserva ORDER BY IdAsistente";
@@ -126,6 +122,5 @@ namespace SistemaReservaSalas.Clases.DAO
                     throw new Exception("Error al eliminar asistentes: " + ex.Message);
                 }
             }
-        }
     }
 }
