@@ -93,7 +93,7 @@
             // 
             this.panelBienvenida.Controls.Add(this.lblFechaHora);
             this.panelBienvenida.Controls.Add(this.lblBienvenida);
-            this.panelBienvenida.Location = new System.Drawing.Point(60, 62);
+            this.panelBienvenida.Location = new System.Drawing.Point(94, 62);
             this.panelBienvenida.Name = "panelBienvenida";
             this.panelBienvenida.Size = new System.Drawing.Size(608, 223);
             this.panelBienvenida.TabIndex = 1;
@@ -122,7 +122,7 @@
             // 
             // btnNuevaReserva
             // 
-            this.btnNuevaReserva.Location = new System.Drawing.Point(60, 331);
+            this.btnNuevaReserva.Location = new System.Drawing.Point(88, 333);
             this.btnNuevaReserva.Name = "btnNuevaReserva";
             this.btnNuevaReserva.Size = new System.Drawing.Size(161, 35);
             this.btnNuevaReserva.TabIndex = 2;
@@ -131,7 +131,7 @@
             // 
             // btnVerSalas
             // 
-            this.btnVerSalas.Location = new System.Drawing.Point(292, 331);
+            this.btnVerSalas.Location = new System.Drawing.Point(320, 333);
             this.btnVerSalas.Name = "btnVerSalas";
             this.btnVerSalas.Size = new System.Drawing.Size(161, 35);
             this.btnVerSalas.TabIndex = 3;
@@ -140,7 +140,7 @@
             // 
             // btnGestionUsuarios
             // 
-            this.btnGestionUsuarios.Location = new System.Drawing.Point(523, 331);
+            this.btnGestionUsuarios.Location = new System.Drawing.Point(551, 333);
             this.btnGestionUsuarios.Name = "btnGestionUsuarios";
             this.btnGestionUsuarios.Size = new System.Drawing.Size(161, 35);
             this.btnGestionUsuarios.TabIndex = 4;
