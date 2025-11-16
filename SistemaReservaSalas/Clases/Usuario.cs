@@ -11,6 +11,14 @@ namespace SistemaReservaSalas.Clases
         // NO puede llamarse igual que la clase (no puede ser "Usuario")
         public string UsuarioNombre { get; set; }
 
+        // método EsAdministrador() para que los forms puedan preguntar el rol
+        public bool EsAdministrador()
+        {
+            if (string.IsNullOrWhiteSpace(Rol))
+                return false;
+            return string.Equals(Rol.Trim(), "Administrador", StringComparison.OrdinalIgnoreCase);
+        }
+
         // Para compatibilidad si algún código usa 'NombreUsuario'
         public string NombreUsuario
         {
@@ -21,6 +29,7 @@ namespace SistemaReservaSalas.Clases
         public string Password { get; set; }
         public string Rol { get; set; }
         public bool Activo { get; set; }
+
 
         public Usuario() { }
 

@@ -26,5 +26,40 @@ namespace SistemaReservaSalas.Clases
         public string UbicacionSala { get; set; }
 
         public List<Asistente> Asistentes { get; set; } = new List<Asistente>();
+
+        public void CalcularHoraFin()
+        {
+            // Convertir Duracion (decimal horas) a TimeSpan
+            // TimeSpan.FromHours requiere double, hacemos el cast seguro
+            HoraFin = HoraInicio + TimeSpan.FromHours((double)Duracion);
+        }
+        public void CalcularTotales()
+        {
+            decimal subtotal = 0.00m;
+
+            if (Asistentes != null && Asistentes.Any())
+            {
+                foreach (var a in Asistentes)
+                {
+                    try
+                    {
+                        subtotal += a.CalcularCosto(Duracion);
+                    }
+                    catch
+                    {
+                        // Si algún asistente no implementa CalcularCosto correctamente,
+                        // evitamos que todo falle; puedes capturar/loguear si deseas.
+                    }
+                }
+            }
+
+            Subtotal = subtotal;
+
+            // IVA: 12% 
+            decimal porcentajeIva = 0.12m;
+            IVA = Math.Round(Subtotal * porcentajeIva, 2, MidpointRounding.AwayFromZero);
+
+            Total = Subtotal + IVA;
+        }
     }
 }

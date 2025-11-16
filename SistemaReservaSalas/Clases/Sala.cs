@@ -14,5 +14,23 @@ namespace SistemaReservaSalas.Clases
         public bool TieneAireAcondicionado { get; set; }
         public string OtrosEquipos { get; set; }
         public bool Disponible { get; set; }
+
+        public string ObtenerEquipamiento()
+        {
+            var list = new List<string>();
+
+            if (TieneProyector) list.Add("Proyector");
+            if (TieneOasis) list.Add("Oasis");
+            if (TieneCafetera) list.Add("Cafetera");
+            if (TienePizarra) list.Add("Pizarra");
+            if (TieneAireAcondicionado) list.Add("Aire acondicionado");
+
+            if (!string.IsNullOrWhiteSpace(OtrosEquipos))
+                list.Add(OtrosEquipos.Trim());
+
+            if (list.Count == 0)
+                return "Sin equipamiento adicional.";
+            return string.Join(", ", list);
+        }
     }
 }
