@@ -33,7 +33,7 @@ namespace SistemaReservaSalas.Clases
         }
         public Asistente(string nombreAsistente, int comboSeleccionado)
         {
-            nombreAsistente = nombreAsistente;
+            Nombre = nombreAsistente;
             ComboSeleccionado = comboSeleccionado;
         }
 

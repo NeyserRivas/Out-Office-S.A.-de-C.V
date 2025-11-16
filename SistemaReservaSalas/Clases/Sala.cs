@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SistemaReservaSalas.Clases
 {
     public class Sala

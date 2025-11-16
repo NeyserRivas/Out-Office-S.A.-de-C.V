@@ -1,3 +1,5 @@
+using System;
+
 namespace SistemaReservaSalas.Clases
 {
     public class Usuario
