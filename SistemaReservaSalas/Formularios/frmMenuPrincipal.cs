@@ -11,8 +11,8 @@ namespace SistemaReservaSalas.Formularios
     public partial class frmMenuPrincipal : Form
     {
         private Usuario usuarioActual;
+        //private Timer timerFecha;
         private Timer timer;
-        private Timer timerFecha;
 
         /// <summary>
         /// Constructor que recibe el usuario autenticado

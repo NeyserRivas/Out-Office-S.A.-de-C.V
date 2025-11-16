@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using SistemaReservaSalas.Clases;
 using SistemaReservaSalas.Clases.DAO;
@@ -36,8 +37,8 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void ConfigurarFormulario()
         {
-            this.Text = "Consulta de Reservas";
             this.StartPosition = FormStartPosition.CenterScreen;
+            
             
 
             // Configurar DateTimePickers

@@ -11,6 +11,7 @@ namespace SistemaReservaSalas.Clases
 
         // Precio por hora o por unidad; decimal para dinero.
         public decimal PrecioBase { get; set; }
+        public object[] NombreAsistente { get; internal set; }
 
         public decimal ObtenerPrecioCombo()
         {
