@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaSalas.Clases.DAO
 {
-    class AsistenteDAO
-    {
+    public class AsistenteDAO
+    { 
+
     }
 }
