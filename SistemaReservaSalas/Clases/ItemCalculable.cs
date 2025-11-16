@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SistemaReservaSalas.Clases
 {
-    class ItemCalculable
+    public class ItemCalculable
     {
+        // placeholder for items that can be calculated (combos, servicios, etc.)
+        public string Nombre { get; set; }
+        public decimal Precio { get; set; }
     }
 }

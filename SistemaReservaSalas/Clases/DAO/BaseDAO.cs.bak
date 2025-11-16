@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SistemaReservaSalas.Clases.DAO
+{
+    class BaseDAO
+    {
+        /// <summary>
+        /// Clase abstracta base para todas las operaciones DAO
+        /// Proporciona funcionalidad común para acceso a datos
+        /// </summary>
+        /// 
+        public abstract class BaseDAO
+        {
+            protected ConexionBD conexionBD;
+
+            /// <summary>
+            /// Constructor que inicializa la conexión
+            /// </summary>
+            protected BaseDAO()
+            {
+                conexionBD = ConexionBD.GetInstancia();
+            }
+
+            /// <summary>
+            /// Método abstracto para listar registros
+            /// </summary>
+            public abstract DataTable Listar();
+
+            /// <summary>
+            /// Método abstracto para buscar por ID
+            /// </summary>
+            public abstract object BuscarPorId(int id);
+
+            /// <summary>
+            /// Método protegido para ejecutar consultas sin retorno
+            /// </summary>
+            protected bool EjecutarComando(string query, MySqlParameter[] parametros = null)
+            {
+                try
+                {
+                    conexionBD.Conectar();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexionBD.ObtenerConexion()))
+                    {
+                        if (parametros != null)
+                        {
+                            cmd.Parameters.AddRange(parametros);
+                        }
+                        cmd.ExecuteNonQuery();
+                    }
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al ejecutar comando: " + ex.Message);
+                }
+                finally
+                {
+                    conexionBD.Desconectar();
+                }
+            }/// <summary>
+             /// Método protegido para ejecutar consultas con retorno de datos
+             /// </summary>
+            protected DataTable EjecutarConsulta(string query, MySqlParameter[] parametros = null)
+            {
+                DataTable dt = new DataTable();
+                try
+                {
+                    conexionBD.Conectar();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexionBD.ObtenerConexion()))
+                    {
+                        if (parametros != null)
+                        {
+                            cmd.Parameters.AddRange(parametros);
+                        }
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al ejecutar consulta: " + ex.Message);
+                }
+                finally
+                {
+                    conexionBD.Desconectar();
+                }
+                return dt;
+            }
+
+            /// <summary>
+            /// Método protegido para obtener el último ID insertado
+            /// </summary>
+            protected int ObtenerUltimoId()
+            {
+                try
+                {
+                    string query = "SELECT LAST_INSERT_ID()";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexionBD.ObtenerConexion()))
+                    {
+                        return Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener último ID: " + ex.Message);
+                }
+            }
+        }
+    }
+}
