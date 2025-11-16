@@ -533,9 +533,5 @@ namespace SistemaReservaSalas.Formularios
             cmbSala.Focus();
         }
 
-        private void lblTotalAsistentes_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

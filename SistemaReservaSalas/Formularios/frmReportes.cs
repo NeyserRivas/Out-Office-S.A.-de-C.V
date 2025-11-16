@@ -57,7 +57,7 @@ namespace SistemaReservaSalas.Formularios
             ConfigurarDataGridView();
 
             // Configurar Chart
-            ConfigurarGrafico();
+            //ConfigurarGrafico();
 
             // Deshabilitar controles según tipo de reporte
             ActualizarControlesSegunTipo();
@@ -104,6 +104,7 @@ namespace SistemaReservaSalas.Formularios
         /// <summary>
         /// Configura el gráfico
         /// </summary>
+        /*
         private void ConfigurarGrafico()
         {
             //TODO: Estos chartReportes dice q el nombre no existe en el contexto actual
@@ -123,7 +124,7 @@ namespace SistemaReservaSalas.Formularios
             legend.Docking = Docking.Bottom;
             chartReporte.Legends.Add(legend);
         }
-
+        */
         /// <summary>
         /// Actualiza los controles según el tipo de reporte seleccionado
         /// </summary>
@@ -218,7 +219,7 @@ namespace SistemaReservaSalas.Formularios
                 dgvReporte.Columns["CantidadReservas"].HeaderText = "Cantidad de Reservas";
 
             // Generar gráfico
-            GenerarGraficoReservasPorFecha();
+            //GenerarGraficoReservasPorFecha();
 
             if (datosReporte.Rows.Count == 0)
             {
@@ -250,7 +251,7 @@ namespace SistemaReservaSalas.Formularios
                 dgvReporte.Columns["TotalReservas"].HeaderText = "Total Reservas";
 
             // Generar gráfico
-            GenerarGraficoIngresosPorSala();
+            //GenerarGraficoIngresosPorSala();
 
             if (datosReporte.Rows.Count == 0)
             {
@@ -301,7 +302,7 @@ namespace SistemaReservaSalas.Formularios
             else
             {
                 // Gráfico de estados
-                GenerarGraficoEstados();
+                //GenerarGraficoEstados();
             }
         }
 
@@ -324,7 +325,7 @@ namespace SistemaReservaSalas.Formularios
             }
 
             // Generar gráfico
-            GenerarGraficoOcupacion();
+            //GenerarGraficoOcupacion();
 
             if (datosReporte.Rows.Count == 0)
             {
@@ -342,6 +343,8 @@ namespace SistemaReservaSalas.Formularios
         /// <summary>
         /// Genera gráfico de reservas por fecha
         /// </summary>
+        /// 
+        /*
         private void GenerarGraficoReservasPorFecha()
         {
             chartReporte.Series.Clear();
@@ -363,11 +366,11 @@ namespace SistemaReservaSalas.Formularios
             chartReporte.Titles.Clear();
             chartReporte.Titles.Add("Ingresos por Fecha");
         }
-
+        */
         /// <summary>
         /// Genera gráfico de ingresos por sala
         /// </summary>
-        private void GenerarGraficoIngresosPorSala()
+        /*private void GenerarGraficoIngresosPorSala()
         {
             chartReporte.Series.Clear();
 
@@ -395,10 +398,12 @@ namespace SistemaReservaSalas.Formularios
             chartReporte.Titles.Clear();
             chartReporte.Titles.Add("Ingresos por Sala");
         }
-
+        */
         /// <summary>
         /// Genera gráfico de ocupación
         /// </summary>
+        /// 
+        /*
         private void GenerarGraficoOcupacion()
         {
             chartReporte.Series.Clear();
@@ -429,10 +434,11 @@ namespace SistemaReservaSalas.Formularios
             chartReporte.Titles.Clear();
             chartReporte.Titles.Add("Ocupación de Salas (Horas)");
         }
-
+        */
         /// <summary>
         /// Genera gráfico de estados de reservas
         /// </summary>
+        /*
         private void GenerarGraficoEstados()
         {
             chartReporte.Series.Clear();
@@ -467,7 +473,7 @@ namespace SistemaReservaSalas.Formularios
             chartReporte.Titles.Clear();
             chartReporte.Titles.Add("Distribución por Estado");
         }
-
+        */
         #endregion
 
         /// <summary>

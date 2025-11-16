@@ -380,7 +380,7 @@ namespace SistemaReservaSalas.Formularios
             this.lblTotalAsistentes.Size = new System.Drawing.Size(80, 12);
             this.lblTotalAsistentes.TabIndex = 21;
             this.lblTotalAsistentes.Text = "Total Asistentes";
-            this.lblTotalAsistentes.Click += new System.EventHandler(this.lblTotalAsistentes_Click);
+            //this.lblTotalAsistentes.Click += new System.EventHandler(this.lblTotalAsistentes_Click);
             // 
             // dgvAsistentes
             // 
