@@ -59,6 +59,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -147,7 +148,6 @@
             this.btnVerSalas.TabIndex = 3;
             this.btnVerSalas.Text = "Ver Salas";
             this.btnVerSalas.UseVisualStyleBackColor = true;
-            this.btnVerSalas.Click += new System.EventHandler(this.btnVerSalas_Click);
             // 
             // btnGestionUsuarios
             // 
@@ -179,7 +179,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal ";
-            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelBienvenida.ResumeLayout(false);

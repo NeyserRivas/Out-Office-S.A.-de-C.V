@@ -16,10 +16,5 @@ namespace SistemaReservaSalas
         {
             InitializeComponent();
         }
-
-        private void btnGuardarSala_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
