@@ -1,4 +1,4 @@
-﻿namespace SistemaReservaSalas
+﻿namespace SistemaReservaSalas.Formularios
 {
     partial class frmMenuPrincipal
     {
@@ -59,7 +59,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -179,6 +178,8 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.frmMenuPrincipal_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelBienvenida.ResumeLayout(false);

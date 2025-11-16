@@ -1,5 +1,5 @@
 ﻿
-namespace SistemaReservaSalas
+namespace SistemaReservaSalas.Formularios
 {
     partial class frmNuevaReserva
     {
@@ -29,7 +29,7 @@ namespace SistemaReservaSalas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardarReserva = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -71,10 +71,10 @@ namespace SistemaReservaSalas
             this.lblCombo3Detalle = new System.Windows.Forms.Label();
             this.lblCombo2Detalle = new System.Windows.Forms.Label();
             this.lblCombo1Detalle = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblTotalPagar = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblIVA = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,6 +83,7 @@ namespace SistemaReservaSalas
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCombo1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuracion)).BeginInit();
@@ -101,6 +102,7 @@ namespace SistemaReservaSalas
             this.btnGuardarReserva.TabIndex = 0;
             this.btnGuardarReserva.Text = "Guardar Reserva";
             this.btnGuardarReserva.UseVisualStyleBackColor = true;
+            this.btnGuardarReserva.Click += new System.EventHandler(this.btnGuardarReserva_Click);
             // 
             // btnCancelar
             // 
@@ -110,6 +112,7 @@ namespace SistemaReservaSalas
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnCerrar
             // 
@@ -119,6 +122,7 @@ namespace SistemaReservaSalas
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // label5
             // 
@@ -145,6 +149,7 @@ namespace SistemaReservaSalas
             this.btnVerDetallesSala.TabIndex = 3;
             this.btnVerDetallesSala.Text = "Ver detalle";
             this.btnVerDetallesSala.UseVisualStyleBackColor = true;
+            this.btnVerDetallesSala.Click += new System.EventHandler(this.btnVerDetallesSala_Click_1);
             // 
             // cmbSala
             // 
@@ -184,7 +189,6 @@ namespace SistemaReservaSalas
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccion de sala:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -241,6 +245,7 @@ namespace SistemaReservaSalas
             this.btnVerificarDisponibilidad.TabIndex = 7;
             this.btnVerificarDisponibilidad.Text = "Verificar Disponivilidad:";
             this.btnVerificarDisponibilidad.UseVisualStyleBackColor = true;
+            this.btnVerificarDisponibilidad.Click += new System.EventHandler(this.btnVerificarDisponibilidad_Click_1);
             // 
             // lblHoraFin
             // 
@@ -340,7 +345,6 @@ namespace SistemaReservaSalas
             this.label10.Size = new System.Drawing.Size(48, 12);
             this.label10.TabIndex = 9;
             this.label10.Text = "Telefono:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -391,8 +395,8 @@ namespace SistemaReservaSalas
             // 
             // Nombre
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle3;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             // 
@@ -409,6 +413,7 @@ namespace SistemaReservaSalas
             this.btnQuitarAsistente.TabIndex = 19;
             this.btnQuitarAsistente.Text = "Quitar";
             this.btnQuitarAsistente.UseVisualStyleBackColor = true;
+            this.btnQuitarAsistente.Click += new System.EventHandler(this.btnQuitarAsistente_Click_1);
             // 
             // btnAgregarAsistente
             // 
@@ -418,6 +423,7 @@ namespace SistemaReservaSalas
             this.btnAgregarAsistente.TabIndex = 18;
             this.btnAgregarAsistente.Text = "Agregar";
             this.btnAgregarAsistente.UseVisualStyleBackColor = true;
+            this.btnAgregarAsistente.Click += new System.EventHandler(this.btnAgregarAsistente_Click);
             // 
             // cmbComboAsistente
             // 
@@ -454,13 +460,14 @@ namespace SistemaReservaSalas
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.lblCombo1);
             this.groupBox5.Controls.Add(this.lblCombo3Detalle);
             this.groupBox5.Controls.Add(this.lblCombo2Detalle);
             this.groupBox5.Controls.Add(this.lblCombo1Detalle);
-            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.lblTotalPagar);
             this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.lblIVA);
+            this.groupBox5.Controls.Add(this.lblSubtotal);
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Location = new System.Drawing.Point(52, 547);
             this.groupBox5.Name = "groupBox5";
@@ -472,7 +479,7 @@ namespace SistemaReservaSalas
             // lblCombo3Detalle
             // 
             this.lblCombo3Detalle.AutoSize = true;
-            this.lblCombo3Detalle.Location = new System.Drawing.Point(23, 96);
+            this.lblCombo3Detalle.Location = new System.Drawing.Point(23, 62);
             this.lblCombo3Detalle.Name = "lblCombo3Detalle";
             this.lblCombo3Detalle.Size = new System.Drawing.Size(49, 12);
             this.lblCombo3Detalle.TabIndex = 22;
@@ -481,7 +488,7 @@ namespace SistemaReservaSalas
             // lblCombo2Detalle
             // 
             this.lblCombo2Detalle.AutoSize = true;
-            this.lblCombo2Detalle.Location = new System.Drawing.Point(23, 62);
+            this.lblCombo2Detalle.Location = new System.Drawing.Point(23, 37);
             this.lblCombo2Detalle.Name = "lblCombo2Detalle";
             this.lblCombo2Detalle.Size = new System.Drawing.Size(49, 12);
             this.lblCombo2Detalle.TabIndex = 21;
@@ -490,20 +497,20 @@ namespace SistemaReservaSalas
             // lblCombo1Detalle
             // 
             this.lblCombo1Detalle.AutoSize = true;
-            this.lblCombo1Detalle.Location = new System.Drawing.Point(23, 37);
+            this.lblCombo1Detalle.Location = new System.Drawing.Point(23, 16);
             this.lblCombo1Detalle.Name = "lblCombo1Detalle";
             this.lblCombo1Detalle.Size = new System.Drawing.Size(49, 12);
             this.lblCombo1Detalle.TabIndex = 20;
             this.lblCombo1Detalle.Text = "Combo 1:";
             // 
-            // label17
+            // lblTotalPagar
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(295, 96);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 12);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "Total a Pagar:";
+            this.lblTotalPagar.AutoSize = true;
+            this.lblTotalPagar.Location = new System.Drawing.Point(295, 96);
+            this.lblTotalPagar.Name = "lblTotalPagar";
+            this.lblTotalPagar.Size = new System.Drawing.Size(67, 12);
+            this.lblTotalPagar.TabIndex = 19;
+            this.lblTotalPagar.Text = "Total a Pagar:";
             // 
             // label16
             // 
@@ -514,24 +521,23 @@ namespace SistemaReservaSalas
             this.label16.TabIndex = 18;
             this.label16.Text = "-----------------------------------";
             // 
-            // label15
+            // lblIVA
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(296, 62);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 12);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Iva (13%):";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.lblIVA.AutoSize = true;
+            this.lblIVA.Location = new System.Drawing.Point(296, 62);
+            this.lblIVA.Name = "lblIVA";
+            this.lblIVA.Size = new System.Drawing.Size(55, 12);
+            this.lblIVA.TabIndex = 17;
+            this.lblIVA.Text = "Iva (13%):";
             // 
-            // label1
+            // lblSubtotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(295, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 12);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "SubTotal:";
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Location = new System.Drawing.Point(295, 37);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(49, 12);
+            this.lblSubtotal.TabIndex = 16;
+            this.lblSubtotal.Text = "SubTotal:";
             // 
             // label14
             // 
@@ -593,6 +599,14 @@ namespace SistemaReservaSalas
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // lblCombo1
+            // 
+            this.lblCombo1.AutoSize = true;
+            this.lblCombo1.Location = new System.Drawing.Point(23, 96);
+            this.lblCombo1.Name = "lblCombo1";
+            this.lblCombo1.Size = new System.Drawing.Size(0, 12);
+            this.lblCombo1.TabIndex = 23;
             // 
             // frmNuevaReserva
             // 
@@ -667,10 +681,10 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.TextBox txtNombreAsistente;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIVA;
+        private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTotalPagar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dgvAsistentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
@@ -687,5 +701,6 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.Label lblCombo1;
     }
 }

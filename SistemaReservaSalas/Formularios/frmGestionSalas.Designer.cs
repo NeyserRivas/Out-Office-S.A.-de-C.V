@@ -1,5 +1,5 @@
 ﻿
-namespace SistemaReservaSalas
+namespace SistemaReservaSalas.Formularios
 {
     partial class frmGestionSalas
     {
@@ -57,9 +57,9 @@ namespace SistemaReservaSalas
             this.label4 = new System.Windows.Forms.Label();
             this.btnNuevaSala = new System.Windows.Forms.Button();
             this.btnGuardarSala = new System.Windows.Forms.Button();
-            this.btnVerCalendario = new System.Windows.Forms.Button();
+            this.btnVerDisponibilidad = new System.Windows.Forms.Button();
             this.btnEliminarSala = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +67,7 @@ namespace SistemaReservaSalas
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,6 +102,7 @@ namespace SistemaReservaSalas
             this.txtBuscarSala.Name = "txtBuscarSala";
             this.txtBuscarSala.Size = new System.Drawing.Size(194, 20);
             this.txtBuscarSala.TabIndex = 2;
+            this.txtBuscarSala.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarSala_KeyPress);
             // 
             // btnBuscar
             // 
@@ -110,6 +112,7 @@ namespace SistemaReservaSalas
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // dgvSalas
             // 
@@ -118,6 +121,7 @@ namespace SistemaReservaSalas
             this.dgvSalas.Name = "dgvSalas";
             this.dgvSalas.Size = new System.Drawing.Size(627, 150);
             this.dgvSalas.TabIndex = 4;
+            this.dgvSalas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalas_CellDoubleClick);
             // 
             // label3
             // 
@@ -326,48 +330,53 @@ namespace SistemaReservaSalas
             // 
             // btnNuevaSala
             // 
-            this.btnNuevaSala.Location = new System.Drawing.Point(46, 607);
+            this.btnNuevaSala.Location = new System.Drawing.Point(24, 607);
             this.btnNuevaSala.Name = "btnNuevaSala";
             this.btnNuevaSala.Size = new System.Drawing.Size(101, 43);
             this.btnNuevaSala.TabIndex = 7;
             this.btnNuevaSala.Text = "Nueva Sala";
             this.btnNuevaSala.UseVisualStyleBackColor = true;
+            this.btnNuevaSala.Click += new System.EventHandler(this.btnNuevaSala_Click);
             // 
             // btnGuardarSala
             // 
-            this.btnGuardarSala.Location = new System.Drawing.Point(207, 607);
+            this.btnGuardarSala.Location = new System.Drawing.Point(162, 607);
             this.btnGuardarSala.Name = "btnGuardarSala";
             this.btnGuardarSala.Size = new System.Drawing.Size(101, 43);
             this.btnGuardarSala.TabIndex = 8;
             this.btnGuardarSala.Text = "Guardar";
             this.btnGuardarSala.UseVisualStyleBackColor = true;
+            this.btnGuardarSala.Click += new System.EventHandler(this.btnGuardarSala_Click);
             // 
-            // btnVerCalendario
+            // btnVerDisponibilidad
             // 
-            this.btnVerCalendario.Location = new System.Drawing.Point(547, 607);
-            this.btnVerCalendario.Name = "btnVerCalendario";
-            this.btnVerCalendario.Size = new System.Drawing.Size(101, 43);
-            this.btnVerCalendario.TabIndex = 9;
-            this.btnVerCalendario.Text = "Ver  Calendario";
-            this.btnVerCalendario.UseVisualStyleBackColor = true;
+            this.btnVerDisponibilidad.Location = new System.Drawing.Point(463, 607);
+            this.btnVerDisponibilidad.Name = "btnVerDisponibilidad";
+            this.btnVerDisponibilidad.Size = new System.Drawing.Size(101, 43);
+            this.btnVerDisponibilidad.TabIndex = 9;
+            this.btnVerDisponibilidad.Text = "Ver  Disponibilidad";
+            this.btnVerDisponibilidad.UseVisualStyleBackColor = true;
+            this.btnVerDisponibilidad.Click += new System.EventHandler(this.btnVerDisponibilidad_Click);
             // 
             // btnEliminarSala
             // 
-            this.btnEliminarSala.Location = new System.Drawing.Point(378, 607);
+            this.btnEliminarSala.Location = new System.Drawing.Point(312, 607);
             this.btnEliminarSala.Name = "btnEliminarSala";
             this.btnEliminarSala.Size = new System.Drawing.Size(101, 43);
             this.btnEliminarSala.TabIndex = 10;
             this.btnEliminarSala.Text = "Eliminar";
             this.btnEliminarSala.UseVisualStyleBackColor = true;
+            this.btnEliminarSala.Click += new System.EventHandler(this.btnEliminarSala_Click);
             // 
-            // btnCerrar
+            // btnCancelar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(705, 607);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(101, 43);
-            this.btnCerrar.TabIndex = 11;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(610, 607);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 43);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // menuStrip1
             // 
@@ -421,15 +430,26 @@ namespace SistemaReservaSalas
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(739, 607);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(101, 43);
+            this.btnCerrar.TabIndex = 19;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // frmGestionSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 677);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminarSala);
-            this.Controls.Add(this.btnVerCalendario);
+            this.Controls.Add(this.btnVerDisponibilidad);
             this.Controls.Add(this.btnGuardarSala);
             this.Controls.Add(this.btnNuevaSala);
             this.Controls.Add(this.groupBox1);
@@ -442,6 +462,7 @@ namespace SistemaReservaSalas
             this.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmGestionSalas";
             this.Text = "Gestión de Salas";
+            this.Load += new System.EventHandler(this.frmGestionSalas_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -485,9 +506,9 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.CheckBox chkProyector;
         private System.Windows.Forms.Button btnNuevaSala;
         private System.Windows.Forms.Button btnGuardarSala;
-        private System.Windows.Forms.Button btnVerCalendario;
+        private System.Windows.Forms.Button btnVerDisponibilidad;
         private System.Windows.Forms.Button btnEliminarSala;
-        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salasToolStripMenuItem;
@@ -495,5 +516,6 @@ namespace SistemaReservaSalas
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
