@@ -50,6 +50,7 @@
             this.btnLogIn.TabIndex = 0;
             this.btnLogIn.Text = "Iniciar Sesión";
             this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // txtUsuario
             // 
@@ -119,7 +120,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "SISTEMA DE RESERVA DE SALAS  OUT OFFICE S.A.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 

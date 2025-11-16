@@ -341,6 +341,7 @@ namespace SistemaReservaSalas
             this.btnGuardarSala.TabIndex = 8;
             this.btnGuardarSala.Text = "Guardar";
             this.btnGuardarSala.UseVisualStyleBackColor = true;
+            this.btnGuardarSala.Click += new System.EventHandler(this.btnGuardarSala_Click);
             // 
             // btnVerCalendario
             // 
