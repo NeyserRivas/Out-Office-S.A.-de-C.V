@@ -147,6 +147,7 @@
             this.btnVerSalas.TabIndex = 3;
             this.btnVerSalas.Text = "Ver Salas";
             this.btnVerSalas.UseVisualStyleBackColor = true;
+            this.btnVerSalas.Click += new System.EventHandler(this.btnVerSalas_Click);
             // 
             // btnGestionUsuarios
             // 
@@ -156,6 +157,7 @@
             this.btnGestionUsuarios.TabIndex = 4;
             this.btnGestionUsuarios.Text = "Gestion Usuarios";
             this.btnGestionUsuarios.UseVisualStyleBackColor = true;
+            this.btnGestionUsuarios.Click += new System.EventHandler(this.btnGestionUsuarios_Click_1);
             // 
             // statusStrip1
             // 

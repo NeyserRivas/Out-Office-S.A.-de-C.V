@@ -309,6 +309,9 @@ namespace SistemaReservaSalas.Formularios
             panelBienvenida.Dock = DockStyle.Fill;
         }
 
-        
+        private void btnGestionUsuarios_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
