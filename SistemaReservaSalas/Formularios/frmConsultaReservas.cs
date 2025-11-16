@@ -38,7 +38,7 @@ namespace SistemaReservaSalas.Formularios
         {
             this.Text = "Consulta de Reservas";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Size = new System.Drawing.Size(1200, 700);
+            
 
             // Configurar DateTimePickers
             dtpDesde.Value = DateTime.Today.AddMonths(-1);
@@ -123,6 +123,7 @@ namespace SistemaReservaSalas.Formularios
             dgvDetalleAsistentes.Columns.Add("Combo", "Combo");
             dgvDetalleAsistentes.Columns.Add("Precio", "Precio/Hora");
 
+            //modificale el tamaño a esas madres xq yo no se como hacerlo en propiedades
             dgvDetalleAsistentes.Columns["Nombre"].Width = 200;
             dgvDetalleAsistentes.Columns["Combo"].Width = 100;
             dgvDetalleAsistentes.Columns["Precio"].Width = 100;

@@ -19,6 +19,7 @@ namespace SistemaReservaSalas.Formularios
         private ReservaDAO reservaDAO;
         private SalaDAO salaDAO;
         private DataTable datosReporte;
+        private object chartReporte;
 
         /// <summary>
         /// Constructor del formulario
@@ -723,6 +724,10 @@ namespace SistemaReservaSalas.Formularios
 
         }
 
-       
+        private class ChartArea
+        {
+            public object AxisY { get; internal set; }
+            public object AxisX { get; internal set; }
+        }
     }
 }

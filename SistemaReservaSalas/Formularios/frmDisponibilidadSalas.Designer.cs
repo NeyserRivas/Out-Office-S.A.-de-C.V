@@ -38,7 +38,7 @@ namespace SistemaReservaSalas.Formularios
             this.dgvHorarios = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblFechaSeleccionada = new System.Windows.Forms.Label();
-            this.lblInfoSala = new System.Windows.Forms.Label();
+            this.lblInfoDia = new System.Windows.Forms.Label();
             this.btnNuevaReserva = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -125,7 +125,7 @@ namespace SistemaReservaSalas.Formularios
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblFechaSeleccionada);
-            this.groupBox3.Controls.Add(this.lblInfoSala);
+            this.groupBox3.Controls.Add(this.lblInfoDia);
             this.groupBox3.Location = new System.Drawing.Point(18, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(320, 76);
@@ -142,14 +142,14 @@ namespace SistemaReservaSalas.Formularios
             this.lblFechaSeleccionada.TabIndex = 1;
             this.lblFechaSeleccionada.Text = "Fecha:";
             // 
-            // lblInfoSala
+            // lblInfoDia
             // 
-            this.lblInfoSala.AutoSize = true;
-            this.lblInfoSala.Location = new System.Drawing.Point(32, 18);
-            this.lblInfoSala.Name = "lblInfoSala";
-            this.lblInfoSala.Size = new System.Drawing.Size(31, 14);
-            this.lblInfoSala.TabIndex = 0;
-            this.lblInfoSala.Text = "Sala:";
+            this.lblInfoDia.AutoSize = true;
+            this.lblInfoDia.Location = new System.Drawing.Point(32, 18);
+            this.lblInfoDia.Name = "lblInfoDia";
+            this.lblInfoDia.Size = new System.Drawing.Size(31, 14);
+            this.lblInfoDia.TabIndex = 0;
+            this.lblInfoDia.Text = "Sala:";
             // 
             // btnNuevaReserva
             // 
@@ -262,7 +262,7 @@ namespace SistemaReservaSalas.Formularios
         private System.Windows.Forms.DataGridView dgvHorarios;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblFechaSeleccionada;
-        private System.Windows.Forms.Label lblInfoSala;
+        private System.Windows.Forms.Label lblInfoDia;
         private System.Windows.Forms.Button btnNuevaReserva;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.MenuStrip menuStrip1;

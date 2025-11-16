@@ -12,6 +12,7 @@ namespace SistemaReservaSalas.Formularios
     {
         private Usuario usuarioActual;
         private Timer timer;
+        private Timer timerFecha;
 
         /// <summary>
         /// Constructor que recibe el usuario autenticado

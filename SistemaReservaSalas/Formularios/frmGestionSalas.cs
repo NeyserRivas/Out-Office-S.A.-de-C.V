@@ -464,7 +464,7 @@ namespace SistemaReservaSalas.Formularios
             txtBuscarSala.Clear();
         }
 
-        #endregion
+
 
         /// <summary>
         /// Evento al presionar Enter en el campo de búsqueda
@@ -497,9 +497,9 @@ namespace SistemaReservaSalas.Formularios
                 txtNombreSala.Focus();
             }
         }
-
-        
-
-        
-    }
+    }   
+    
 }
+
+//No se para que sirve esto pero el ide daba error si no lo ponia
+#endregion
