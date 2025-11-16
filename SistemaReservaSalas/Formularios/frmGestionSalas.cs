@@ -197,13 +197,13 @@ namespace SistemaReservaSalas.Formularios
                     NombreSala = txtNombreSala.Text.Trim(),
                     Ubicacion = txtUbicacion.Text.Trim(),
                     Capacidad = (int)numCapacidad.Value,
-                    Distribucion = txtDistribucion.Text.Trim(),
+                    Distribucion = rtbDistribucion.Text.Trim(),
                     TieneProyector = chkProyector.Checked,
                     TieneOasis = chkOasis.Checked,
                     TieneCafetera = chkCafetera.Checked,
                     TienePizarra = chkPizarra.Checked,
                     TieneAireAcondicionado = chkAireAcondicionado.Checked,
-                    OtrosEquipos = txtOtrosEquipos.Text.Trim(),
+                    OtrosEquipos = txtOtroEquipo.Text.Trim(),
                     Disponible = chkDisponible.Checked
                 };
 
