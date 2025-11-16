@@ -8,18 +8,14 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaSalas.Clases.DAO
 {
-    class UsuarioDAO
+    public class UsuarioDAO : BaseDAO
     {
         #region Clase UsuarioDAO - Hereda de BaseDAO (HERENCIA 3)
         /// <summary>
         /// Clase DAO para operaciones con Usuarios
         /// Hereda de BaseDAO
+        /// Autentica un usuario en el sistema
         /// </summary>
-        public class UsuarioDAO : BaseDAO
-        {
-            /// <summary>
-            /// Autentica un usuario en el sistema
-            /// </summary>
             public Usuario Autenticar(string nombreUsuario, string password)
             {
                 try
@@ -203,7 +199,6 @@ namespace SistemaReservaSalas.Clases.DAO
                     throw new Exception("Error al buscar usuarios: " + ex.Message);
                 }
             }
-        }
-        #endregion
     }
 }
+#endregion
