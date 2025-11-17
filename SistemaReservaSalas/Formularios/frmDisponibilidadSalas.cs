@@ -327,9 +327,9 @@ namespace SistemaReservaSalas.Formularios
         private void MostrarLeyenda()
         {
             string leyenda = "LEYENDA DE ESTADOS:\n\n" +
-                           "🟡 Amarillo: Reserva Activa\n" +
-                           "🟢 Verde: Reserva Completada\n" +
-                           "⚫ Gris: Reserva Cancelada";
+                           "Amarillo: Reserva Activa\n" +
+                           "Verde: Reserva Completada\n" +
+                           "Gris: Reserva Cancelada";
 
             MessageBox.Show(leyenda, "Leyenda de Colores",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

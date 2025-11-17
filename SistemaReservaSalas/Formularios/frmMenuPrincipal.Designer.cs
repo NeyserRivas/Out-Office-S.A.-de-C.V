@@ -113,11 +113,11 @@
             this.lblFechaHora.AutoSize = true;
             this.lblFechaHora.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaHora.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblFechaHora.Location = new System.Drawing.Point(265, 105);
+            this.lblFechaHora.Location = new System.Drawing.Point(236, 104);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(70, 25);
+            this.lblFechaHora.Size = new System.Drawing.Size(130, 25);
             this.lblFechaHora.TabIndex = 1;
-            this.lblFechaHora.Text = "label2";
+            this.lblFechaHora.Text = "16/11/2025";
             // 
             // lblBienvenida
             // 

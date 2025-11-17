@@ -196,8 +196,8 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void btnVerificarDisponibilidad_Click_1(object sender, EventArgs e)
         {
-            if (!ValidarSeleccionSala())
-                return;
+            /*if (!ValidarSeleccionSala())
+                return;*/
 
             try
             {
@@ -245,9 +245,9 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void btnAgregarAsistente_Click(object sender, EventArgs e)
         {
-            if (!ValidarDatosAsistente())
+            /*if (!ValidarDatosAsistente())
                 return;
-
+            */
             try
             {
                 // Crear asistente
@@ -275,7 +275,7 @@ namespace SistemaReservaSalas.Formularios
                 ActualizarContadorAsistentes();
 
                 // Limpiar campos
-                LimpiarCamposAsistente();
+               // LimpiarCamposAsistente();
 
                 MessageBox.Show("Asistente agregado correctamente.",
                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -400,8 +400,8 @@ namespace SistemaReservaSalas.Formularios
         /// </summary>
         private void btnGuardarReserva_Click(object sender, EventArgs e)
         {
-            if (!ValidarReserva())
-                return;
+            //if (!ValidarReserva())
+                //return;
 
             try
             {
@@ -477,7 +477,7 @@ namespace SistemaReservaSalas.Formularios
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
 
-                    LimpiarFormulario();
+                    //LimpiarFormulario();
                 }
                 else
                 {
@@ -512,7 +512,7 @@ namespace SistemaReservaSalas.Formularios
                 if (resultado == DialogResult.Yes)
                 {
                     //TODO: Esto dice que no existe en el contexto actual
-                    LimpiarFormulario();
+                    //LimpiarFormulario();
                 }
             }
         }
